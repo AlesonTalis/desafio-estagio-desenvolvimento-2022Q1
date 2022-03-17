@@ -1,5 +1,8 @@
 fs = require("fs");
-const path = "./data/cadastros.csv"
+const path = "../../data/cadastros.csv"
+
+const result = process.argv !== null && process.argv[process.argv.length - 1] !== null ? process.argv[process.argv.length - 1] : "result.json"
+// console.log(process.argv)
 
 // classe Cadastro
 Cadastro = require('./Cadastro.js').Cadastro
@@ -20,7 +23,7 @@ function ParseCVSToArray(_path, _callback, _error)
 
     })
   }
-  catch
+  catch(e)
   {
 
     _error(e)
@@ -46,7 +49,7 @@ ParseCVSToArray(path, (file) => {
       return
   })
 
-  fs.writeFile('result.json', JSON.stringify({
+  fs.writeFile(result, JSON.stringify({
 
     CadastrosSalvos: cadastros, 
 

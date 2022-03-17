@@ -1,13 +1,24 @@
 {
-  "name": "cvs-parser",
+  "name": "desafio-estagio-desenvolvimento-2022q1",
   "version": "1.0.0",
-  "description": "",
+  "description": "@author AlesonTalis",
   "main": "index.js",
   "scripts": {
-    "start": "node ./main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "serverless-java": "node ./serverless/Javascript/main.js result/result-javascript-serverless.json",
+
+    "serverless-dotnet": "dotnet build serverless/dotnet/CVSLeitor.csproj && dotnet run --project ./serverless/dotnet/CVSLeitor.csproj --result result/result-dotnet-serverless.json"
   },
-  "keywords": ["cvs","parser","teste"],
-  "author": "AlesonTalis",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlesonTalis/desafio-estagio-desenvolvimento-2022Q1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlesonTalis/desafio-estagio-desenvolvimento-2022Q1/issues"
+  },
+  "homepage": "https://github.com/AlesonTalis/desafio-estagio-desenvolvimento-2022Q1#readme"
 }
